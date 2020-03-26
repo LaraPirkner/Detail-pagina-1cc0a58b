@@ -14,15 +14,7 @@
 <p class="text">Titel</p><p class="text">Rating</p>
 </div>
 <?php
-include 'includes/connect.php';
-
-/* Insert de informatie per row (repeated for each piece of info)*/
-/*
-$sql = "INSERT INTO films (Title, Duur) 
-VALUES ('Sint', 85)";
-
-$pdo->exec($sql);
-*/
+require 'includes/connect.php';
 
 /*print de info*/
 echo "<table>";
@@ -31,6 +23,7 @@ echo "<tr>";
 foreach ($data as $row) {
     echo "<td>". $row['Title']. "</td>";
     echo "<td>" .$row['Rating']."</td>";
+    echo "<td><a href='serie.php?id=$row[ID]'>Info</a></td>" ;
     echo "</tr>";
 }
 echo "</table>"
@@ -47,6 +40,7 @@ echo "<tr>";
 foreach ($data as $row) {
     echo "<td>". $row['Title']."</td>"; 
     echo "<td>". $row['Duur']."</td>";
+    echo "<td><a href='film.php?id=$row[ID]'>Info</a></td>" ;
     echo "</tr>";
 }
 echo "</table>"
