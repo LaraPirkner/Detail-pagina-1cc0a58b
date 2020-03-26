@@ -23,7 +23,7 @@ echo "<tr>";
 foreach ($data as $row) {
     echo "<td>". $row['Title']. "</td>";
     echo "<td>" .$row['Rating']."</td>";
-    echo "<td><a href='serie.php?id=$row[ID]'>Info</a></td>" ;
+    echo "<td><a href='series.php?id=$row[ID]'>Info</a></td>" ;
     echo "</tr>";
 }
 echo "</table>"
@@ -40,7 +40,7 @@ echo "<tr>";
 foreach ($data as $row) {
     echo "<td>". $row['Title']."</td>"; 
     echo "<td>". $row['Duur']."</td>";
-    echo "<td><a href='film.php?id=$row[ID]'>Info</a></td>" ;
+    echo "<td><a href='films.php?id=$row[ID]'>Info</a></td>" ;
     echo "</tr>";
 }
 echo "</table>"
